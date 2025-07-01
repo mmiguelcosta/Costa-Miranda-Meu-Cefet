@@ -1,0 +1,1 @@
+export { Home as ScreenHome } from "./Home";
