@@ -3,11 +3,13 @@ import styles from "./style";
 import { Text, View, ScrollView } from "react-native";
 import { ComponentCard } from "../../components";
 
-export function Home(){
+export function Home({route}: any){
+    const {nome} = route.params || {};
+
     return(
         <View style={styles.container}>
             <Text style={styles.welcomeText}>
-                Boas-vindas Álvaro!
+                Boas-vindas, {nome}!
             </Text>
             <Text style={styles.sectionTitle}>
                 Notícias:
