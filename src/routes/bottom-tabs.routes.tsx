@@ -1,6 +1,6 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
-import { ScreenHome, ScreenHorarios } from "../screens";
+import { ScreenHelp, ScreenHome, ScreenHorarios } from "../screens";
 import { View, StyleSheet } from "react-native";
 
 const {Navigator, Screen} = createBottomTabNavigator();
@@ -14,7 +14,7 @@ const colors = {
 };
 
 export function BottomTabsRoutes({route}: any){
-    const nome = route.params || {};
+    const { nome } = route.params || {};
 
     return(
         <Navigator initialRouteName="Home"
@@ -74,7 +74,7 @@ export function BottomTabsRoutes({route}: any){
                 options={{
                   title: "Início"
                 }}
-                initialParams={{nome}}
+                initialParams={{nome: nome}}
             />
 
             <Screen 
@@ -83,20 +83,21 @@ export function BottomTabsRoutes({route}: any){
                 options={{
                     title: "Horários",
                 }}
-                initialParams={{nome}}
+                initialParams={{nome: nome}}
             />
 
             <Screen 
                 name="Help"
-                component={ScreenHome}
+                component={ScreenHelp}
                 options={{
                     title: "Ajuda",
                 }}
-                initialParams={{nome}}
+                initialParams={{nome: nome}}
             />
-
+           
         </Navigator>
     );
+   
 };
 
 const styles = StyleSheet.create({

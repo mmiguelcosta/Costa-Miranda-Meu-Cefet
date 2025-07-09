@@ -10,7 +10,7 @@ export function Login({navigation}: any){
             Alert.alert("Erro de Login", "Por favor, digite seu nome para continuar.");
             return;
         }
-        navigation.navigate("App", nome);
+        navigation.navigate("App", {nome: nome});
     };
 
     return(
@@ -20,14 +20,7 @@ export function Login({navigation}: any){
 
             <TextInput
                 style={styles.input}
-                onChangeText={(text) => {
-                    if(text.trim() != ""){
-                        setNome(text);
-                    }
-                    else{
-                        setNome("Aluno");
-                    }
-                }}
+                onChangeText={(text) => {setNome(text);}}
                 placeholder="Seu nome completo"
                 placeholderTextColor={'#333333' + '80'}
             />
