@@ -6,11 +6,11 @@ import { View, StyleSheet } from "react-native";
 const {Navigator, Screen} = createBottomTabNavigator();
 
 const colors = {
-    laranja: '#FF8C00',
-    azulEscuro: '#001F3F',
+    laranja: '#ff7b00', 
+    azulEscuro: '#003c79', 
     cinzaClaro: '#F0F0F0',
-    textoClaro: '#FFFFFF',
-    textoEscuro: '#333333',
+    textoClaro: '#fff',
+    textoEscuro: '#000',
 };
 
 export function BottomTabsRoutes({route}: any){
@@ -20,28 +20,17 @@ export function BottomTabsRoutes({route}: any){
         <Navigator initialRouteName="Home"
         screenOptions={({ route }) => ({
             headerStyle: {
-              backgroundColor: colors.azulEscuro,
-              borderBottomWidth: 0,
-              elevation: 0,
-              shadowOpacity: 0,
+              backgroundColor: colors.cinzaClaro,
             },
-            headerTintColor: colors.textoClaro,
-            headerTitleStyle: {
-              fontWeight: 'bold',
-              fontSize: 20,
-            },
-            headerTitleAlign: 'center',
+            headerTintColor: colors.cinzaClaro, 
     
             tabBarActiveTintColor: colors.laranja,
-            tabBarInactiveTintColor: colors.cinzaClaro,
+            tabBarInactiveTintColor: colors.laranja,
             tabBarStyle: {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               backgroundColor: colors.azulEscuro,
-              borderTopWidth: 0,
-              elevation: 0,
-              shadowOpacity: 0,
               height: 80,
               paddingBottom: 5,
             },
@@ -49,31 +38,16 @@ export function BottomTabsRoutes({route}: any){
               fontSize: 12,
               fontWeight: '600',
             },
-
-            tabBarIcon: ({ focused, color, size }) => {
-              let iconName: any = "";
-    
-              if(route.name === 'Home') {
-                iconName = focused ? 'home' : 'home-outline';
-              }
-              else if (route.name === 'Horarios') {
-                iconName = focused ? 'calendar' : 'calendar-outline';
-              }
-              else if (route.name === 'Help') {
-                iconName = focused ? 'help-circle' : 'help-circle-outline';
-              }
-    
-              return <Ionicons name={iconName} size={size} color={color} />;
-            },
-
           })}
         >
             <Screen 
                 name="Home"
                 component={ScreenHome}
                 options={{
-                  title: "Início"
-                }}
+                  title: "Home", 
+                  tabBarIcon: ({ color, size }) => {
+                    return <Ionicons name="home" size={size} color={color} />  
+                     }}}
                 initialParams={{nome: nome}}
             />
 
@@ -82,7 +56,9 @@ export function BottomTabsRoutes({route}: any){
                 component={ScreenHorarios}
                 options={{
                     title: "Horários",
-                }}
+                    tabBarIcon: ({ color, size }) => {
+                    return <Ionicons name="calendar" size={size} color={color} />  
+                     }}}
                 initialParams={{nome: nome}}
             />
 
@@ -91,7 +67,9 @@ export function BottomTabsRoutes({route}: any){
                 component={ScreenHelp}
                 options={{
                     title: "Ajuda",
-                }}
+                    tabBarIcon: ({ color, size }) => {
+                    return <Ionicons name="help-circle" size={size} color={color} />  
+                }}}
                 initialParams={{nome: nome}}
             />
            
@@ -100,31 +78,4 @@ export function BottomTabsRoutes({route}: any){
    
 };
 
-const styles = StyleSheet.create({
-    screenContainer: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: colors.cinzaClaro,
-    },
-    screenText: {
-      fontSize: 24,
-      fontWeight: 'bold',
-      color: colors.azulEscuro,
-    },
-    headerTitleContainer: {
-      flexDirection: 'row',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-    headerTitleImage: {
-      width: 30,
-      height: 30,
-      marginRight: 8,
-    },
-    headerTitleText: {
-      color: colors.textoClaro,
-      fontSize: 18,
-      fontWeight: 'bold',
-    },
-  });
+

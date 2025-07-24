@@ -15,14 +15,13 @@ export function Login({navigation}: any){
 
     return(
         <View style={styles.container}>
-            <Text style={styles.title}>Bem-vindo ao Sistema Acadêmico!</Text>
-            <Text style={styles.label}>Digite seu nome:</Text>
+            <Text style={styles.title}>Meu CEFET-MG</Text>
 
             <TextInput
                 style={styles.input}
                 onChangeText={(text) => {setNome(text);}}
-                placeholder="Seu nome completo"
-                placeholderTextColor={'#333333' + '80'}
+                placeholder="Digite seu nome "
+                placeholderTextColor={'#000' + '80'}
             />
 
             <TouchableOpacity style={styles.button} onPress={handleLogin}>

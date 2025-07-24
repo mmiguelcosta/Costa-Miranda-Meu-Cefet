@@ -7,19 +7,18 @@ const colors = {
     textoClaro: '#FFFFFF',
     textoEscuro: '#333333',
 };
-
 const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: colors.cinzaClaro,
+        backgroundColor: colors.azulEscuro,
         padding: 20,
     },
     title: {
         fontSize: 28,
         fontWeight: 'bold',
-        color: colors.azulEscuro,
+        color: colors.cinzaClaro,
         marginBottom: 40,
         textAlign: 'center',
     },
@@ -32,18 +31,11 @@ const styles = StyleSheet.create({
         width: '90%',
         height: 50,
         backgroundColor: colors.textoClaro,
-        borderRadius: 8,
+        borderRadius: 2,
         paddingHorizontal: 15,
         fontSize: 16,
         color: colors.textoEscuro,
-        borderWidth: 1,
-        borderColor: colors.laranja,
-        marginBottom: 20,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.1,
-        shadowRadius: 4,
-        elevation: 3,
+        marginBottom: 20, 
     },
     button: {
         backgroundColor: colors.laranja,

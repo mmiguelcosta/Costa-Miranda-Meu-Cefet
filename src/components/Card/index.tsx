@@ -5,16 +5,15 @@ import styles from "./style";
 export function Card() {
     return (
         <View style={styles.cardContainer}>
-            <Text style={styles.cardTitle}>
-                Hello World!
+            <Text style={styles.Titulo}>
+                Coisa Acontece No Campus Varginha
             </Text>
-            <Text style={styles.cardContent}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla interdum mi ante,
-                rutrum maximus erat maximus quis. Nunc sit amet consectetur dolor. Morbi elit nisl,
-                tempus ac sollicitudin a, consequat et lectus. Praesent rutrum, mauris a pulvinar
-                pulvinar, purus urna vehicula lacus, ac luctus diam lectus et enim. Fusce id maximus
-                augue. Donec vitae leo vel dui condimentum efficitur. Donec ornare lacinia purus ac
-                mollis. Integer non egestas mi.
+            <Text style={styles.Descricao}>
+                essa semana aconteceu uma coisa muito legal no campus Varginha:
+                planeta dos normies foi invadido por um exército de cachorros
+                que queriam dominar o mundo. Eles foram derrotados por um grupo
+                composto por alunos do curso de Engenharia de Software, que
+                usaram suas habilidades de programação para criar um software
             </Text>
         </View>
     );

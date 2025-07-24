@@ -7,11 +7,9 @@ export function Home({route}: any){
     return(
         <View style={styles.container}>
             <Text style={styles.welcomeText}>
-                Boas-vindas, {route.params.nome}!
+               Notícias:
             </Text>
-            <Text style={styles.sectionTitle}>
-                Notícias:
-            </Text>
+
             <ScrollView contentContainerStyle={styles.scrollViewContent}>
                 <ComponentCard/>
                 <ComponentCard/>

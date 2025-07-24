@@ -1,11 +1,11 @@
 import { StyleSheet } from "react-native";
 
 const colors = {
-    laranja: '#FF8C00',
+    laranja: '#ff7b00',
     azulEscuro: '#001F3F',
     cinzaClaro: '#F0F0F0',
-    textoClaro: '#FFFFFF',
-    textoEscuro: '#333333',
+    textoClaro: '#fff',
+    textoEscuro: '#000',
 };
 
 const styles = StyleSheet.create({
@@ -26,21 +26,14 @@ const styles = StyleSheet.create({
     },
     daySchedule: {
         backgroundColor: colors.textoClaro,
-        borderRadius: 8,
+        borderRadius: 2,
         padding: 15,
         marginBottom: 10,
-        borderLeftWidth: 5,
-        borderLeftColor: colors.laranja,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.1,
-        shadowRadius: 4,
-        elevation: 3,
     },
     dayText: {
         fontSize: 18,
         fontWeight: 'bold',
-        color: colors.azulEscuro,
+        color: colors.laranja, // kkkk mmuito laranja ta aprendendo com vc ainda bibi tattoo studio
         marginBottom: 5,
     },
     scheduleText: {
